@@ -1,0 +1,36 @@
+# ---------------------------------------------------------------------------
+# News, newest first is not required: items are sorted by date automatically.
+#
+# date: "YYYY-MM-DD", "YYYY-MM" or "YYYY".  Dates in the future get an
+#       "Upcoming" tag automatically.
+# text: supports **bold**, *italic*, [link text](url) and [[C1]]-style
+#       references, which link to the paper on the Publications page.
+# ---------------------------------------------------------------------------
+
+[[news]]
+date = "2026-12"
+text = "Our paper on the certification of learning-based feedback linearization under measurement perturbations [[C4]] will be presented at the **65th IEEE Conference on Decision and Control** (CDC 2026), Honolulu, Hawaii (15–18 December)."
+
+[[news]]
+date = "2026-08-23"
+text = "Presented our work on the exact translation between ReLU recurrent neural networks and continuous piecewise-affine dynamical systems [[C3]] at the **23rd IFAC World Congress**, Busan, Republic of Korea. [Slides](slides/ifac2026/)"
+
+[[news]]
+date = "2026-08"
+text = "Presented our study on adversarial perturbations of neural network models for nonlinear dynamical systems [[C2]] at the **IEEE 22nd International Conference on Automation Science and Engineering** (CASE 2026), Shenyang, China. [Slides](slides/case2026/)"
+
+[[news]]
+date = "2025-12-10"
+text = "Presented “Certification of Autoencoder-based Models for Dynamical Systems” [[C1]] at the **64th IEEE Conference on Decision and Control** (CDC 2025), Rio de Janeiro, Brazil. [Slides](slides/cdc2025/)"
+
+[[news]]
+date = "2025-09-03"
+text = "Talk on adversarial learning attacks on autoencoder-based models for nonlinear dynamical systems at **Automatica.it 2025**, the annual meeting of the Italian Systems and Control community, Perugia, Italy. [Slides](slides/automatica2025/)"
+
+[[news]]
+date = "2024"
+text = "Started the **Ph.D. in Electronic and Computer Engineering** at the University of Cagliari, under the supervision of Prof. Mauro Franceschelli."
+
+[[news]]
+date = "2024"
+text = "Received the **M.Sc. in Computer Engineering, Cybersecurity and Artificial Intelligence** (110/110 cum laude) from the University of Cagliari, with the thesis “Adversarial Learning Attacks on Autoencoder-based Models for Control Systems” [[T1]]. [Read the thesis](thesis/)"

@@ -1,0 +1,28 @@
+# ---------------------------------------------------------------------------
+# Teaching activities.  Course names are kept in Italian (official names),
+# with an English translation in "course_en".
+# years: one or more academic years.
+# Optional: "activities", "url" (course page), "materials" (link for students).
+# ---------------------------------------------------------------------------
+
+intro = "Teaching support for undergraduate engineering courses at the University of Cagliari: exercise sessions, problem solving and exam preparation."
+
+[[course]]
+years      = ["2025/2026", "2026/2027"]
+role       = "Teaching assistant (tutor)"
+course     = "Analisi dei Sistemi"
+course_en  = "Systems Analysis"
+program    = "B.Sc. in Electronic, Computer and Telecommunications Engineering"
+instructor = "C. Seatzu"
+activities = "Exercise sessions, student mentoring, grading support"
+topics     = ["Linear input–output systems", "State-space representation", "Time- and frequency-domain analysis", "Stability of dynamical systems"]
+
+[[course]]
+years      = ["2025/2026"]
+role       = "Teaching assistant (tutor)"
+course     = "Elementi di Analisi dei Sistemi"
+course_en  = "Elements of Systems Analysis"
+program    = "B.Sc. in Biomedical Engineering"
+instructor = "A. Giua"
+activities = "Exercise sessions, student mentoring, grading support"
+topics     = ["Time-domain analysis of linear systems", "Frequency-domain analysis", "Stability of dynamical systems"]

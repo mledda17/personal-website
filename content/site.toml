@@ -1,0 +1,62 @@
+# ---------------------------------------------------------------------------
+# Global settings and profile.  Edit this file to change the homepage text,
+# the profile links and the list of co-authors that get a link.
+# ---------------------------------------------------------------------------
+
+base_url    = "https://www.marcoledda.it"   # no trailing slash
+title       = "Marco Ledda"
+description = "Marco Ledda, Ph.D. candidate in Systems and Control at the University of Cagliari: certification of learning-enabled systems, adversarial perturbations, learning-based system identification."
+news_on_home = 5          # how many news items appear on the homepage
+
+[profile]
+name        = "Marco Ledda"
+role        = "Ph.D. Candidate in Systems and Control"
+department  = "Department of Electrical and Electronic Engineering (DIEE)"
+department_url = "https://web.unica.it/unica/en/dip_ingelettrica.page"
+university  = "University of Cagliari"
+address     = "Piazza d'Armi, 09123 Cagliari, Italy"
+photo       = "assets/img/marco-ledda.jpg"
+email       = "marco.ledda2@unica.it"
+
+# Short biography shown on the homepage (supports **bold**, *italic* and [text](url)).
+bio = """
+Marco Ledda is a Ph.D. candidate in Systems and Control at the University of Cagliari, Italy. He earned his Bachelor's degree in Electrical, Electronic, and Computer Engineering from the University of Cagliari in 2022, followed by a Master's degree in Computer Engineering, Cybersecurity, and Artificial Intelligence, graduating with honors in 2024 from the same institution.
+
+His research focuses on the **certification and safety of learning-enabled autonomous systems**, with particular emphasis on learning-based control, neural-network-based system modeling, and robustness to adversarial perturbations. His work aims at developing analysis and verification methodologies that provide formal or quantitative guarantees for data-driven components deployed in safety-critical control and autonomous systems.
+"""
+
+# Profile links: leave a value empty ("") to hide the corresponding button.
+[links]
+cv            = "files/cv/Marco_Ledda_CV.pdf"
+scholar       = "https://scholar.google.com/citations?user=xwDjct4AAAAJ&hl=en"
+orcid         = "https://orcid.org/0009-0007-9013-7893"
+github        = "https://github.com/mledda17"
+linkedin      = "https://www.linkedin.com/in/marco-ledda-8407ba192/"
+scopus        = ""
+institutional = ""   # UniCa / IRIS profile page
+
+# Research interests shown as cards on the homepage.
+# icon: one of "certify", "adversarial", "sysid"
+[[interest]]
+title  = "Certification of learning-based autonomous systems"
+text   = "Optimization-based worst-case analysis of neural models and learning-enabled controllers, turning reliability questions into certifiable bounds."
+icon   = "certify"
+
+[[interest]]
+title  = "Adversarial learning in control systems"
+text   = "Optimized, bounded perturbations of inputs, measurements and stored histories that expose the fragile directions of learned dynamical models."
+icon   = "adversarial"
+
+[[interest]]
+title  = "Learning-based system identification"
+text   = "Structured neural state-space models and exact links between ReLU networks and piecewise-affine dynamical systems."
+icon   = "sysid"
+
+# Co-authors: the name exactly as written in publications.toml -> homepage.
+# Authors not listed here are shown without a link.
+[people]
+"M. Ledda"         = "me"
+"D. Deplano"       = "https://diegodeplano.github.io/"
+"A. Giua"          = "https://www.alessandro-giua.it/"
+"M. Franceschelli" = "https://web.unica.it/unica/page/en/mauro_franceschelli"
+"C. Seatzu"        = "https://web.unica.it/unica/page/en/carla_seatzu"

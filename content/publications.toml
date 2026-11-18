@@ -1,0 +1,228 @@
+# ---------------------------------------------------------------------------
+# Publications.
+#
+# Each [[publication]] needs:  id, category, title, authors, venue, year.
+# Optional fields:
+#   status      "accepted" | "to appear" | "under review"   (shown as a tag)
+#   place       city/country of the conference
+#   pages       e.g. "401-406"
+#   doi         DOI without the https://doi.org/ prefix (title then links to it)
+#   url         link for the title when there is no DOI (e.g. arXiv page)
+#   manuscript  path to the PDF (put the file in files/papers/)
+#   code        link to the code repository
+#   short       compact venue tag used on cards, e.g. "IEEE CDC 2026"
+#   logo        image in assets/logos/  (logo_url: where the logo links to)
+#   logo_text   text tile used when no logo image is available
+#   logo_fill   true -> the logo image covers the whole tile (use it for logos
+#               with a coloured background); otherwise it is fitted with padding
+#   logo_note   small ribbon on the logo tile (e.g. "Under review")
+#   note        extra line under the venue (supports [text](url))
+#   reader      creates a page at /<reader>/ to read the PDF online
+#   thumbnail   first-page image in assets/thumbs/ (used on the homepage)
+#   selected    true -> appears in "Selected publications" on the homepage
+#   abstract, bibtex
+#
+# Slides are linked automatically from content/talks.toml (field "paper").
+# Homepage order follows the order of this file; the Publications page
+# groups papers by category and sorts them by label (newest first).
+# ---------------------------------------------------------------------------
+
+[[category]]
+key     = "preprint"
+prefix  = "A"
+title   = "arXiv Preprints"
+caption = "Preprints and manuscripts currently under review."
+empty   = "No preprints at the moment."
+
+[[category]]
+key     = "journal"
+prefix  = "J"
+title   = "Journal Articles"
+caption = "Papers published in peer-reviewed journals."
+empty   = "No journal articles yet: ResDyNet [[A1]] is currently under review."
+
+[[category]]
+key     = "conference"
+prefix  = "C"
+title   = "Conference Papers"
+caption = "Papers published in the proceedings of peer-reviewed international conferences."
+empty   = "No conference papers yet."
+
+[[category]]
+key     = "thesis"
+prefix  = "T"
+title   = "Theses"
+caption = "Degree theses, available to read online."
+unit    = ["thesis", "theses"]
+empty   = "No theses listed."
+
+# ---------------------------------------------------------------------------
+
+[[publication]]
+id         = "C4"
+category   = "conference"
+title      = "Certification of Learning-Based Feedback Linearization Under Measurement Perturbations"
+authors    = ["M. Ledda", "D. Deplano", "A. Giua", "M. Franceschelli"]
+venue      = "65th IEEE Conference on Decision and Control (CDC)"
+place      = "Honolulu, Hawaii, USA"
+year       = 2026
+status     = "accepted"
+short      = "IEEE CDC 2026"
+manuscript = "files/papers/ledda2026cdc.pdf"
+logo       = "assets/logos/cdc2026.jpg"
+logo_fill  = true
+logo_url   = "https://cdc2026.ieeecss.org/"
+thumbnail  = "assets/thumbs/C4.jpg"
+selected   = true
+abstract = """
+In this paper, we study the finite-horizon discrepancy between an ideal feedback-linearized closed loop and a closed loop driven by an imperfect inversion law when the measured output is affected by bounded perturbations. We formulate the problem of determining the perturbation sequence that maximizes the mismatch between the actual plant output and the ideal linearized output over a prescribed horizon. We then address this problem for a learning-based feedback-linearization architecture in which the nominal inversion is computed from an approximate model and corrected by an additive feedforward neural network. Under a sampled-data implementation, the comparison is cast in discrete time as a finite-dimensional constrained optimization problem that explicitly captures the plant dynamics, the ideal linearized dynamics, the outer linear controller, the perturbation budget, and the neural network structure. Since the resulting formulation is generally nonconvex, the computed solution provides a finite-horizon lower bound on the worst-case discrepancy. Numerical results on a nonlinear system show that the proposed framework identifies perturbations that induce substantially larger deviations than non-optimized Gaussian disturbances.
+"""
+bibtex = '''
+@inproceedings{ledda2026certification,
+  author    = {Ledda, Marco and Deplano, Diego and Giua, Alessandro and Franceschelli, Mauro},
+  title     = {Certification of Learning-Based Feedback Linearization Under Measurement Perturbations},
+  booktitle = {2026 IEEE 65th Conference on Decision and Control (CDC)},
+  address   = {Honolulu, HI, USA},
+  year      = {2026},
+  note      = {To appear}
+}
+'''
+
+[[publication]]
+id         = "A1"
+category   = "preprint"
+title      = "ResDyNet: a Residual State-Space Neural Network for Nonlinear System Identification"
+authors    = ["M. Ledda", "D. Deplano", "A. Giua", "M. Franceschelli"]
+venue      = "IEEE Open Journal of Control Systems"
+year       = 2026
+status     = "under review"
+short      = "IEEE OJ-CSYS"
+manuscript = "files/papers/ledda2026resdynet.pdf"
+logo       = "assets/logos/ojcsys.jpg"
+logo_fill  = true
+logo_url   = "https://ieeecss.org/publication/ieee-open-journal-control-systems"
+logo_note  = "Under review"
+thumbnail  = "assets/thumbs/A1.jpg"
+selected   = true
+abstract = """
+This paper introduces ResDyNet, a structured neural state-space model for nonlinear system identification from input–output data. The architecture interprets residual learning from a dynamical-systems perspective by decomposing the encoder, state-transition map, and decoder into an explicit linear component and a nonlinear correction. In the state-transition map, the linear component retains the form of a latent state-space model, while the nonlinear correction is represented through a deep cascade of identity-residual blocks operating in an internal residual stream. This separates the system-level linear–nonlinear decomposition from the depth-wise residual mechanism used to model nonlinear effects. The architecture is initialized from an identified linear model and its finite-memory state reconstructor, while additional latent coordinates are introduced as trainable degrees of freedom. All parameters are then trained through a weighted multi-step prediction objective aligned with recursive rollout. We establish universal approximation of the proposed evolver. Numerical experiments show that the structured parametrization improves prediction accuracy over a comparable architecture without linear components, while the linear-informed initialization provides a more favorable optimization trajectory. Results on standard nonlinear system-identification benchmarks further demonstrate competitive prediction performance.
+"""
+bibtex = '''
+@misc{ledda2026resdynet,
+  author = {Ledda, Marco and Deplano, Diego and Giua, Alessandro and Franceschelli, Mauro},
+  title  = {{ResDyNet}: a Residual State-Space Neural Network for Nonlinear System Identification},
+  year   = {2026},
+  note   = {Under review at IEEE Open Journal of Control Systems}
+}
+'''
+
+[[publication]]
+id         = "C3"
+category   = "conference"
+title      = "On the Computation of ReLU-based RNNs equivalent to CPWA models of Dynamical Systems and vice versa"
+authors    = ["M. Ledda", "D. Deplano", "A. Giua", "M. Franceschelli"]
+venue      = "23rd IFAC World Congress"
+place      = "Busan, Republic of Korea"
+year       = 2026
+short      = "IFAC WC 2026"
+manuscript = "files/papers/ledda2026ifac.pdf"
+code       = "https://github.com/mledda17/rnn_pwa"
+logo       = "assets/logos/ifac2026.png"
+logo_url   = "https://www.ifac2026.org/"
+thumbnail  = "assets/thumbs/C3.jpg"
+selected   = true
+abstract = """
+This paper develops computational procedures to translate between ReLU recurrent neural networks (RNNs) and continuous piecewise-affine (CPWA) dynamical systems. We show that every ReLU RNN induces a finite polyhedral partition of the state–input space with affine dynamics on each region and provide an explicit constructive algorithm to compute its corresponding CPWA representation. Conversely, we show that every CPWA dynamical system admits an exact realization as a ReLU RNN and provide a constructive procedure to compute the associated network parameters. The computational procedures are illustrated by numerical examples for both directions, showcasing exactly matching trajectories and validating the implementation of the proposed transformations.
+"""
+bibtex = '''
+@inproceedings{ledda2026computation,
+  author    = {Ledda, Marco and Deplano, Diego and Giua, Alessandro and Franceschelli, Mauro},
+  title     = {On the Computation of {ReLU}-based {RNNs} equivalent to {CPWA} models of Dynamical Systems and vice versa},
+  booktitle = {23rd IFAC World Congress},
+  address   = {Busan, Republic of Korea},
+  year      = {2026}
+}
+'''
+
+[[publication]]
+id         = "C2"
+category   = "conference"
+title      = "Evaluating Performance of Neural Network Models for Nonlinear Dynamical Systems via Adversarial Perturbations"
+authors    = ["M. Ledda", "A. Giua", "M. Franceschelli"]
+venue      = "IEEE 22nd International Conference on Automation Science and Engineering (CASE)"
+place      = "Shenyang, China"
+year       = 2026
+short      = "IEEE CASE 2026"
+manuscript = "files/papers/ledda2026case.pdf"
+logo_text  = "IEEE|CASE|2026"
+logo_url   = "https://2026.ieeecase.org/"
+thumbnail  = "assets/thumbs/C2.jpg"
+selected   = true
+abstract = """
+Learning-based models are increasingly used to represent nonlinear dynamical systems in prediction, estimation, and control pipelines. In these settings, assessing the sensitivity of the learned model to perturbations in inputs and measurements is important, since prediction errors may propagate through the control loop and degrade performance. This paper studies the sensitivity of neural network models for nonlinear dynamical systems to optimized additive perturbations. Adversarial optimization is employed as a computational tool to generate perturbations that increase the model prediction error. As a case study, we consider a popular autoencoder-based architecture for nonlinear system identification. Two perturbation settings induced by the architecture are analyzed: an online setting, in which perturbations act on the transition-dynamics input, and an offline setting, in which corruption affects the measurement history provided to the encoder. Numerical simulations on benchmark systems show that even small perturbations can significantly degrade prediction accuracy, highlighting the need for robustness assessment and certification when learning-based models are deployed in control applications.
+"""
+bibtex = '''
+@inproceedings{ledda2026evaluating,
+  author    = {Ledda, Marco and Giua, Alessandro and Franceschelli, Mauro},
+  title     = {Evaluating Performance of Neural Network Models for Nonlinear Dynamical Systems via Adversarial Perturbations},
+  booktitle = {2026 IEEE 22nd International Conference on Automation Science and Engineering (CASE)},
+  address   = {Shenyang, China},
+  year      = {2026}
+}
+'''
+
+[[publication]]
+id         = "C1"
+category   = "conference"
+title      = "Certification of Autoencoder-based Models for Dynamical Systems"
+authors    = ["M. Ledda", "D. Deplano", "A. Giua", "M. Franceschelli"]
+venue      = "64th IEEE Conference on Decision and Control (CDC)"
+place      = "Rio de Janeiro, Brazil"
+year       = 2025
+pages      = "401–406"
+doi        = "10.1109/CDC57313.2025.11312089"
+short      = "IEEE CDC 2025"
+manuscript = "files/papers/ledda2025cdc.pdf"
+code       = "https://github.com/mledda17/AE-Certification-Method"
+logo       = "assets/logos/cdc2025.svg"
+logo_url   = "https://cdc2025.ieeecss.org/"
+thumbnail  = "assets/thumbs/C1.jpg"
+selected   = true
+abstract = """
+Deep learning models have emerged as powerful tools for modeling complex dynamical systems, offering data-driven alternatives to traditional identification techniques. Among them, autoencoder-based architectures have gained popularity due to their ability to extract low-dimensional latent representations starting from high-dimensional information. However, a major challenge persists: assessing the reliability of these models, especially in control tasks where prediction errors can have critical consequences. In this work, we propose an optimization-based certification approach to quantify the worst-case prediction error of ReLU-activated autoencoder models of dynamical systems. By formulating a targeted Mixed-Integer Quadratic Programming, our approach identifies data sequences that maximize the deviation between the model's predicted output and the true system response.
+"""
+bibtex = '''
+@inproceedings{ledda2025certification,
+  author    = {Ledda, Marco and Deplano, Diego and Giua, Alessandro and Franceschelli, Mauro},
+  title     = {Certification of Autoencoder-based Models for Dynamical Systems},
+  booktitle = {2025 IEEE 64th Conference on Decision and Control (CDC)},
+  pages     = {401--406},
+  year      = {2025},
+  doi       = {10.1109/CDC57313.2025.11312089}
+}
+'''
+
+[[publication]]
+id         = "T1"
+category   = "thesis"
+title      = "Adversarial Learning Attacks on Autoencoder-based Models for Control Systems"
+authors    = ["M. Ledda"]
+venue      = "M.Sc. Thesis in Computer Engineering, Cybersecurity and Artificial Intelligence, University of Cagliari"
+year       = 2024
+short      = "M.Sc. Thesis"
+note       = "Supervisor: [Prof. M. Franceschelli](https://web.unica.it/unica/page/en/mauro_franceschelli) · Final grade: 110/110 cum laude"
+manuscript = "files/thesis/Ledda_MSc_Thesis_2024.pdf"
+reader     = "thesis"
+logo_text  = "MASTER'S|THESIS|2024"
+abstract = """
+Autoencoders have been proposed for system identification, offering a flexible alternative to traditional methods by using past input and output data to represent system dynamics without requiring deep knowledge of the system. While this approach simplifies the identification process, it raises concerns about the robustness and reliability of such networks. Although adversarial vulnerabilities are well-known in areas like computer vision, they remain relatively unexplored in the context of control systems. This thesis explores the vulnerabilities of autoencoder-based models in control systems to adversarial attacks. It introduces new attack strategies targeting the bridge network and information vector of the autoencoder, critical components in the state-space identification process. Through an extensive experimental analysis of benchmark control systems, the study demonstrates how these attacks can degrade system performance, emphasizing the need to find formal guarantees for machine-learning-based control systems. The results offer critical insights into the security and reliability of these systems, highlighting the importance of adversarial robustness for future research and practical applications.
+"""
+bibtex = '''
+@mastersthesis{ledda2024adversarial,
+  author = {Ledda, Marco},
+  title  = {Adversarial Learning Attacks on Autoencoder-based Models for Control Systems},
+  school = {University of Cagliari},
+  type   = {{M.Sc.} thesis},
+  year   = {2024}
+}
+'''

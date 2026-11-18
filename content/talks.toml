@@ -1,0 +1,56 @@
+# ---------------------------------------------------------------------------
+# Talks.  Every talk with a "slug" gets its own page at /slides/<slug>/
+# (the URL printed on the title slide), which embeds the PDF in "slides".
+#
+# date:   "YYYY-MM-DD" or "YYYY-MM"
+# kind:   free text, e.g. "Conference", "National congress", "Seminar"
+# paper:  label of the related paper in publications.toml (adds a Slides
+#         button to that paper automatically)
+# authors: co-authors of the talk (the speaker is you)
+# ---------------------------------------------------------------------------
+
+[[talk]]
+slug       = "ifac2026"
+date       = "2026-08-23"
+kind       = "Conference"
+title      = "On the Computation of ReLU-based RNNs equivalent to CPWA models of Dynamical Systems and vice versa"
+event      = "23rd IFAC World Congress"
+event_url  = "https://www.ifac2026.org/"
+place      = "Busan, Republic of Korea"
+authors    = ["D. Deplano", "A. Giua", "M. Franceschelli"]
+paper      = "C3"
+slides     = "files/slides/ifac2026.pdf"
+
+[[talk]]
+slug       = "case2026"
+date       = "2026-08"
+kind       = "Conference"
+title      = "Evaluating Performance of Neural Network Models for Nonlinear Dynamical Systems via Adversarial Perturbations"
+event      = "IEEE 22nd International Conference on Automation Science and Engineering (CASE 2026)"
+event_url  = "https://2026.ieeecase.org/"
+place      = "Shenyang, China"
+authors    = ["A. Giua", "M. Franceschelli"]
+paper      = "C2"
+slides     = "files/slides/case2026.pdf"
+
+[[talk]]
+slug       = "cdc2025"
+date       = "2025-12-10"
+kind       = "Conference"
+title      = "Certification of Autoencoder-based Models for Dynamical Systems"
+event      = "64th IEEE Conference on Decision and Control (CDC 2025)"
+event_url  = "https://cdc2025.ieeecss.org/"
+place      = "Rio de Janeiro, Brazil"
+authors    = ["D. Deplano", "A. Giua", "M. Franceschelli"]
+paper      = "C1"
+slides     = "files/slides/cdc2025.pdf"
+
+[[talk]]
+slug       = "automatica2025"
+date       = "2025-09-03"
+kind       = "National congress"
+title      = "Adversarial Learning Attacks on Autoencoder-based Models for Nonlinear Dynamical Systems"
+event      = "Automatica.it 2025"
+place      = "Perugia, Italy"
+authors    = ["A. Giua", "M. Franceschelli"]
+slides     = "files/slides/automatica2025.pdf"
