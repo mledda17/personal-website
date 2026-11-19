@@ -20,12 +20,32 @@ date = "2026-08"
 text = "Presented our study on adversarial perturbations of neural network models for nonlinear dynamical systems [[C2]] at the **IEEE 22nd International Conference on Automation Science and Engineering** (CASE 2026), Shenyang, China. [Slides](slides/case2026/)"
 
 [[news]]
+date = "2026-07"
+text = "Attended the **SIDRA PhD Summer School 2026** (15–18 July), module “Optimization and Learning for Robot Control”."
+
+[[news]]
 date = "2025-12-10"
 text = "Presented “Certification of Autoencoder-based Models for Dynamical Systems” [[C1]] at the **64th IEEE Conference on Decision and Control** (CDC 2025), Rio de Janeiro, Brazil. [Slides](slides/cdc2025/)"
 
 [[news]]
+date = "2025-12-09"
+text = "Attended the **Workshop on Physics-Informed Learning for Control: Theory and Practice** at the 64th IEEE Conference on Decision and Control (CDC 2025), Rio de Janeiro, Brazil."
+
+[[news]]
 date = "2025-09-03"
 text = "Talk on adversarial learning attacks on autoencoder-based models for nonlinear dynamical systems at **Automatica.it 2025**, the annual meeting of the Italian Systems and Control community, Perugia, Italy. [Slides](slides/automatica2025/)"
+
+[[news]]
+date = "2025-07"
+text = "Attended the **SIDRA PhD Summer School 2025** (7–12 July), modules “An Introduction to Stochastic Control and Reinforcement Learning” and “Control Methods for Distributed Optimization”."
+
+[[news]]
+date = "2025-05"
+text = "Attended the **EECI-IGSC school** “Multi-agent optimization and learning: resilient and adaptive solutions” at University College London, United Kingdom (6–9 May)."
+
+[[news]]
+date = "2024-12-15"
+text = "Attended the workshop **Learning Dynamics from Data: Fusing Machine Learning and System Identification** at the 63rd IEEE Conference on Decision and Control (CDC 2024), Milan, Italy, organized by Y. Liu, M. Schoukens, R. Tóth and D. Piga."
 
 [[news]]
 date = "2024"
